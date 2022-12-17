@@ -1,29 +1,22 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
-  * print_square - Prints n squares according n number of times
-  * @size: The number of squares/number of times
-  *
-  * Return: empty
-  */
+ * print_square - prints hashes squares.
+ * @size: size of the square.
+ * Return: no return.
+ */
 void print_square(int size)
 {
-	int x, y;
+	int i, j;
 
-	if (size <= 0)
+	for (i = 0; i < size; i++)
 	{
-		_putchar('\n');
-	}
-	else
-	{
-		for (x = 0; x < size; x++)
+		for (j = 0; j < size; j++)
 		{
-			for (y = 0; y < size; y++)
-			{
-				_putchar(35);
-			}
-
-			_putchar('\n');
+			_putchar(35);
 		}
+		if (i != size - 1)
+			_putchar('\n');
 	}
+	_putchar('\n');
 }
